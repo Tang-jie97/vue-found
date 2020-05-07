@@ -25,7 +25,7 @@ router.post("/register",(req,res)=>{
                 email:req.body.email,
                 avatar,
                 password:req.body.password,
-                identify:req.body.identify
+                identity:req.body.identity
             })
 
             bcrypt.genSalt(10,function(err,salt){
@@ -85,7 +85,7 @@ router.get("/current",passport.authenticate("jwt,{session:false}"),(req,res)=>{
         id:req.user.id,
         name:req.user.name,
         email:req.user.email,
-        identify:req.user.identify
+        identity:req.user.identity
     })
 })
 module.exports = router;
