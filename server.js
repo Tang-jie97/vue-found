@@ -35,7 +35,7 @@ require('./config/passport')(passport);
 
 // 使用routes
 app.use('/api/users', users);
-app.use('/api/profile', profiles);
+app.use('/api/profiles', profiles);
 
 const port = process.env.PORT || 5000;
 
